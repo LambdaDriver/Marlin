@@ -799,14 +799,14 @@ CINCS = ${addprefix -I ,${VPATH}}
 CXXINCS = ${addprefix -I ,${VPATH}}
 
 # Silence warnings for library code (won't work for .h files, unfortunately)
-LIBWARN = -w -Wno-packed-bitfield-compat
+LIBWARN = -w -Wno-packed-bitfield-compat  -Wno-comment
 
 # Compiler flag to set the C/CPP Standard level.
 CSTANDARD = -std=gnu99
 CXXSTANDARD = -std=gnu++11
 CDEBUG = -g$(DEBUG)
-CWARN   = -Wall -Wstrict-prototypes -Wno-packed-bitfield-compat -Wno-pragmas -Wunused-parameter
-CXXWARN = -Wall                     -Wno-packed-bitfield-compat -Wno-pragmas -Wunused-parameter
+CWARN   = -Wall -Wstrict-prototypes -Wno-packed-bitfield-compat -Wno-pragmas -Wunused-parameter  -Wno-comment
+CXXWARN = -Wall                     -Wno-packed-bitfield-compat -Wno-pragmas -Wunused-parameter  -Wno-comment
 CTUNING = -fsigned-char -funsigned-bitfields -fno-exceptions \
           -fshort-enums -ffunction-sections -fdata-sections
 ifneq ($(HARDWARE_MOTHERBOARD),)
